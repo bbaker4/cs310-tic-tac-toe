@@ -80,7 +80,7 @@ public class TicTacToeModel {
         /* INSERT YOUR CODE HERE */
         for(int i = 0; i < width; ++i){
             for(int j = 0; j < width; ++j){
-             grid[width][width] = EMPTY;   
+             grid[i][j] = EMPTY;   
             }
         }
         
@@ -93,9 +93,14 @@ public class TicTacToeModel {
            empty! */
         
         /* INSERT YOUR CODE HERE */
-        boolean makeMark;
+        boolean result  = false;
+        isValisSquare();
+        isSquareMarked(row, col);
+        if(grid[row][col] == isValidSquare && grid[row][col] != isSquareMarked){
+            result = true;
+        }
 
-        return false; /* remove this line! */
+        return result; /* remove this line! */
         
     }
 	
@@ -104,11 +109,12 @@ public class TicTacToeModel {
         /* Return true if specified location is within grid bounds */
         
         /* INSERT YOUR CODE HERE */
-        if(row > width & col > width){
-            return true;
+        boolean a = false;
+        if(row < width && col < width){
+             a = true;
+            
         }
-
-        return false; /* remove this line! */
+         return a; /* remove this line! */
         
     }
 	
@@ -117,8 +123,12 @@ public class TicTacToeModel {
         /* Return true if square at specified location is marked */
         
         /* INSERT YOUR CODE HERE */
+        boolean b;
+        if(grid[row][col] != EMPTY){
+            b = true;
+        }
 
-        return false; /* remove this line! */
+        return b; /* remove this line! */
             
     }
 	
