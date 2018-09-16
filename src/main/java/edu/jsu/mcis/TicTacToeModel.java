@@ -70,11 +70,11 @@ public class TicTacToeModel {
         
         this.width = width;
         xTurn = true;
-        
+
         /* Create grid (width x width) as a 2D Mark array */
 
         /* INSERT YOUR CODE HERE */
-		 [][] grid = new Mark[width][width];
+		 [][] grid = Mark[DEFAULT_WIDTH][DEFAULT_WIDTH];
         /* Initialize grid by filling every square with empty marks */
 
         /* INSERT YOUR CODE HERE */
@@ -82,6 +82,7 @@ public class TicTacToeModel {
             for(int j = 0; j < width; ++j){
              grid[i][j] = EMPTY;   
             }
+            System.out.println();
         }
         
     }
@@ -94,9 +95,9 @@ public class TicTacToeModel {
         
         /* INSERT YOUR CODE HERE */
         boolean result  = false;
-        isValisSquare();
-        isSquareMarked(row, col);
-        if(grid[row][col] == isValidSquare && grid[row][col] != isSquareMarked){
+       // isValisSquare();
+       // isSquareMarked(row, col); 
+		if(grid[row][col] == isValidSquare && grid[row][col] != isSquareMarked){
             result = true;
         }
 
@@ -170,6 +171,15 @@ public class TicTacToeModel {
         /* Check the squares of the board to see if the game is a tie */
 
         /* INSERT YOUR CODE HERE */
+        int turn = 0;
+        int counter = 9;
+        for (int k =0; k > counter; ++k){
+            ++turn;
+            if(turn > counter){
+                break;
+                System.out.println("The match is a tie!");
+            }
+        }
 
         return false; /* remove this line! */
         
