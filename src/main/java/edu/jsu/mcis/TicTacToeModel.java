@@ -177,8 +177,8 @@ public class TicTacToeModel {
             ++turn;
             if(turn > counter){
                 break;
-                System.out.println("The match is a tie!");
             }
+            System.out.println("The match is a tie!");
         }
 
         return false; /* remove this line! */
