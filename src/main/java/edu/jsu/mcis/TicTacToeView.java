@@ -17,6 +17,7 @@ public class TicTacToeView {
         /* Print the board to the console (see examples) */
         
         /* INSERT YOUR CODE HERE */
+       System.out.print(TicTacToeModel);
 
     }
 

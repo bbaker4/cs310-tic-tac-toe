@@ -75,7 +75,8 @@ public class TicTacToeModel {
 
         /* INSERT YOUR CODE HERE */
 		 [][] grid = Mark[DEFAULT_WIDTH][DEFAULT_WIDTH];
-        /* Initialize grid by filling every square with empty marks */
+       
+         /* Initialize grid by filling every square with empty marks */
 
         /* INSERT YOUR CODE HERE */
         for(int i = 0; i < width; ++i){
@@ -95,9 +96,11 @@ public class TicTacToeModel {
         
         /* INSERT YOUR CODE HERE */
         boolean result  = false;
-       // isValisSquare();
-       // isSquareMarked(row, col); 
-		if(grid[row][col] == isValidSquare && grid[row][col] != isSquareMarked){
+        isValidSquare(row, col);
+        isSquareMarked(row, col); 
+		Mark[][] isSquareMarked;
+        Mark isValidSquare;
+        if (grid[row][col] == isValidSquare && grid[row][col] != isSquareMarked[row][col]) {
             result = true;
         }
 
@@ -125,7 +128,7 @@ public class TicTacToeModel {
         
         /* INSERT YOUR CODE HERE */
         boolean b;
-        if(grid[row][col] != EMPTY){
+        if (grid[row][col] != EMPTY) {
             b = true;
         }
 
@@ -150,6 +153,12 @@ public class TicTacToeModel {
            value */
         
         /* INSERT YOUR CODE HERE */
+        if(){
+            System.out.println("Congrats" + X + "You are the winner");
+        }
+        else{
+            System.out.println("Congrats" + O + "You are the winner!");
+        }
 
         return null; /* remove this line! */
 
@@ -161,6 +170,11 @@ public class TicTacToeModel {
            winner */
         
         /* INSERT YOUR CODE HERE */
+        for(int l = 0; l < width; ++l){
+            for(int k = 0; k < width; ++k){
+               
+            }
+        }
 
         return false; /* remove this line! */
 
@@ -171,17 +185,21 @@ public class TicTacToeModel {
         /* Check the squares of the board to see if the game is a tie */
 
         /* INSERT YOUR CODE HERE */
+        boolean tie = false;
         int turn = 0;
+        int turn2 = 0;
         int counter = 9;
         for (int k =0; k > counter; ++k){
             ++turn;
-            if(turn > counter){
+            ++turn2;
+            if(turn > counter || turn2 > counter){
+                tie = true;
                 break;
             }
             System.out.println("The match is a tie!");
         }
 
-        return false; /* remove this line! */
+        return tie; /* remove this line! */
         
     }
 
