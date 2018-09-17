@@ -74,7 +74,7 @@ public class TicTacToeModel {
         /* Create grid (width x width) as a 2D Mark array */
 
         /* INSERT YOUR CODE HERE */
-		 [][] grid = Mark[DEFAULT_WIDTH][DEFAULT_WIDTH];
+		 [][] grid = Mark[width][width];
        
          /* Initialize grid by filling every square with empty marks */
 
@@ -140,6 +140,7 @@ public class TicTacToeModel {
         
         /* Return mark from the square at the specified location */
         
+        
         /* INSERT YOUR CODE HERE */
 
         return null; /* remove this line! */
@@ -154,10 +155,10 @@ public class TicTacToeModel {
         
         /* INSERT YOUR CODE HERE */
         if(){
-            System.out.println("Congrats" + X + "You are the winner");
+            System.out.println("Congrats, You are the winner");
         }
         else{
-            System.out.println("Congrats" + O + "You are the winner!");
+            System.out.println("Congrats, You are the winner!");
         }
 
         return null; /* remove this line! */
