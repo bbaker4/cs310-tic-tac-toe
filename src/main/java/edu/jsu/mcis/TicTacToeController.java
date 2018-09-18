@@ -35,6 +35,8 @@ public class TicTacToeController {
            error message using view's showInputError() if input is invalid. */
         
         /* INSERT YOUR CODE HERE */
+        System.out.print("please input 2 numbers with a space inbetween them to place a mark");
+        
         
     }
 

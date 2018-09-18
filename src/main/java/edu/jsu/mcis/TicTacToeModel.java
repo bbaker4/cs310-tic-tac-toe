@@ -74,14 +74,14 @@ public class TicTacToeModel {
         /* Create grid (width x width) as a 2D Mark array */
 
         /* INSERT YOUR CODE HERE */
-		 [][] grid = Mark[width][width];
+		grid = new Mark[width][width];
        
          /* Initialize grid by filling every square with empty marks */
 
         /* INSERT YOUR CODE HERE */
         for(int i = 0; i < width; ++i){
             for(int j = 0; j < width; ++j){
-             grid[i][j] = EMPTY;   
+             grid[i][j] = Mark.EMPTY;   
             }
             System.out.println(grid);
         }
@@ -95,14 +95,13 @@ public class TicTacToeModel {
            empty! */
         
         /* INSERT YOUR CODE HERE */
+        
+
         boolean result  = false;
-        isValidSquare(row, col);
-        isSquareMarked(row, col); 
-		Mark[][] isSquareMarked;
-        Mark isValidSquare;
-        if (/*grid[row][col] == isValidSquare && grid[row][col] != isSquareMarked[row][col]*/) {
-            if(){}
-           // result = true;
+
+        if ( isValidSquare(row,col) && isSquareMarked(row,col) ) {
+
+            result = true;
         }
 
         return result; /* remove this line! */
@@ -114,15 +113,13 @@ public class TicTacToeModel {
         /* Return true if specified location is within grid bounds */
         
         /* INSERT YOUR CODE HERE */
-        boolean a = false;
-        if(row < width && col < width){
-             a = true;
-            
+        if(row < width && row >= 0){
+            if(col < width && col >= 0){
+                return true;
+               
+           }
         }
-        else{
-            System.out.println("Invalid input, please try again");
-        }
-         return a; /* remove this line! */
+        return false;
         
     }
 	
@@ -163,13 +160,13 @@ public class TicTacToeModel {
         
         /* INSERT YOUR CODE HERE */
         
-        if(){
-            System.out.println("Congrats, You are the winner");
+       /* if(){
+         System.out.println("Congrats, You are the winner");
         }
         else{
             System.out.println("Congrats, You are the winner!");
         }
-
+        */
         return null; /* remove this line! */
 
     }
