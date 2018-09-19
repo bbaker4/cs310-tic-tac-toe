@@ -128,16 +128,11 @@ public class TicTacToeModel {
         /* Return true if square at specified location is marked */
         
         /* INSERT YOUR CODE HERE */
-        boolean b = false;
-        Mark blot = Mark.EMPTY;
-        if (grid[row][col] != blot) {
-            b = true;
-        }
-        else{
-            System.out.println("Invalid option, the area is already marked. Please input a new area");
-        }
+       if(row != Mark.EMPTY){
+           return true;
+       }
 
-        return b; /* remove this line! */
+        return false; /* remove this line! */
             
     }
 	
@@ -160,12 +155,11 @@ public class TicTacToeModel {
         
         /* INSERT YOUR CODE HERE */
         
-       /* if(){
-         System.out.println("Congrats, You are the winner");
-        }
-        else{
-            System.out.println("Congrats, You are the winner!");
-        }
+       /*for(int a = 0; a > width; a++){
+           for(int b = 0; b > width; b++){
+            
+           }
+       }
         */
         return null; /* remove this line! */
 
@@ -179,7 +173,9 @@ public class TicTacToeModel {
         /* INSERT YOUR CODE HERE */
         for(int l = 0; l < width; ++l){
             for(int k = 0; k < width; ++k){
-               
+               if(width[j][l] != Mark.Empty){
+                   return true;
+               }
             }
         }
 
