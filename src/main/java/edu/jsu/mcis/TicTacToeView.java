@@ -17,9 +17,8 @@ public class TicTacToeView {
         /* Print the board to the console (see examples) */
         
         /* INSERT YOUR CODE HERE */
-       
-
-
+        TicTacToeModel TicTacToeModel = new TicTacToeModel();
+       System.out.println(TicTacToeModel.grid.toString());
     }
 
     public void showNextMovePrompt() {
