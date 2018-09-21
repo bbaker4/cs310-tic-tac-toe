@@ -20,13 +20,18 @@ public class TicTacToeView {
       System.out.println(" ");
       System.out.print(" ");
         for(int e = 0; e < model.getWidth(); e++){
+            System.out.println(e);
+        }
             for(int a = 0; a < model.getWidth(); a++){
+                System.out.println(a + " ");
                 for(int b = 0; b < model.getWidth(); b++){
+                    System.out.print(model.getMark(a, b));
 
                 }
+                System.out.println('\n');
             }
         }
-    }
+    
 
     public void showNextMovePrompt() {
 
