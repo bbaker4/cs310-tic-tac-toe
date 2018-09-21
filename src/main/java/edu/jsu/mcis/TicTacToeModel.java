@@ -48,7 +48,7 @@ public class TicTacToeModel {
         
     };
     
-    public Mark[][] grid; /* Game grid */
+    private Mark[][] grid; /* Game grid */
     private boolean xTurn; /* True if X is current player */
     private int width;     /* Size of game grid */
     
@@ -143,8 +143,9 @@ public class TicTacToeModel {
         
         
         /* INSERT YOUR CODE HERE */
+        return grid[row][col];
 
-        return null; /* remove this line! */
+         
             
     }
 	

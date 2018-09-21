@@ -17,8 +17,12 @@ public class TicTacToeView {
         /* Print the board to the console (see examples) */
         
         /* INSERT YOUR CODE HERE */
-        TicTacToeModel TicTacToeModel = new TicTacToeModel();
-       System.out.println(TicTacToeModel.grid.toString());
+        model = TicTacToeView(TicTacToe(model));
+        for(int e = 0; e < model; e++){
+            for(int a = 0; a < width; a++){
+
+            }
+        }
     }
 
     public void showNextMovePrompt() {
