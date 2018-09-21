@@ -94,16 +94,21 @@ public class TicTacToeModel {
            empty! */
         
         /* INSERT YOUR CODE HERE */
-        
-
-        boolean result  = false;
-
-        if ( isValidSquare(row,col) && isSquareMarked(row,col) ) {
-
-            result = true;
+        if(isValidSquare(row, col)){
+            if(!isSquareMarked(row, col)){
+                if(xTurn){
+                    grid[row][col] = Mark.X;
+                    xTurn = !xTurn;
+                }
+                else{
+                    grid[row][col] = Mark.O;
+                    xTurn = !xTurn;
+                }
+            }
+                return true;
         }
-
-        return result; /* remove this line! */
+       
+        return false; /* remove this line! */
         
     }
 	
@@ -126,13 +131,13 @@ public class TicTacToeModel {
         
         /* Return true if square at specified location is marked */
         
-        /* INSERT YOUR CODE HERE 
-    if(){
-        if(){
-
+        /* INSERT YOUR CODE HERE */
+    if(isValidSquare(row, col)){
+        if(grid[row][col] == Mark.EMPTY ){
+            return true;
         }
     }
-    */
+    
         return false;  //remove this line! */
             
     }
@@ -157,12 +162,7 @@ public class TicTacToeModel {
         
         /* INSERT YOUR CODE HERE */
         
-       /*for(int a = 0; a > width; a++){
-           for(int b = 0; b > width; b++){
-            
-           }
-       }
-        */
+        
         return null; /* remove this line! */
 
     }
@@ -197,16 +197,24 @@ public class TicTacToeModel {
         /* Check the squares of the board to see if the game is a tie */
 
         /* INSERT YOUR CODE HERE */
-        for(int a = 0; a < width; ++a){
-            for(int b = 0; b < width; ++b){
-               if(grid[a][b] != Mark.EMPTY){
-                   return true;
-               }
-            }
-        }
+        boolean empt = false;
+       for(int row = 0; row < width; row++){
+           for(int col = 0; col < width; col++){
+                if(grid[row][col] != Mark.EMPTY){
+                    empt = true;
+                }
+           }
+       }
+       if(empt){
+           return false;
+       }
+       else{
+           return true;
+       }
+        
        
 
-        return false; /* remove this line! */
+        
         
     }
 
