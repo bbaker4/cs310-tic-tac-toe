@@ -83,9 +83,8 @@ public class TicTacToeModel {
             for(int j = 0; j < width; ++j){
              grid[i][j] = Mark.EMPTY;   
             }
-            System.out.println(grid);
         }
-        
+        System.out.println(grid);
     }
 	
     public boolean makeMark(int row, int col) {
@@ -173,14 +172,20 @@ public class TicTacToeModel {
            winner */
         
         /* INSERT YOUR CODE HERE 
-        for(int l = 0; l < width; ++l){
-            for(int k = 0; k < width; ++k){
-               if(grid[k][l] = Mark){
-                   return true;
+        for(int o = 0; 0 < width; o++){
+            for(int p = 0; p <width; p++){
+                if(!grid[o].equals(Mark.EMPTY) && grid[o].equals(o + 1) && grid[o].equals(o + 2)){                        /*Horizontal win 
+                    return true;
                }
-            }
-        }
-        */
+               else if(!grid[p].equals(Mark.EMPTY)){                   /*verical win 
+                    return true;
+               }            
+               else if(!grid[0][0].equals(Mark.EMPTY) && grid[o][p].equals(grid[o][p] && grid[o][p].equals(grid[o][p]))
+               || !grid[p][o].equals(Mark.EMPTY && grid[p][o].equals(grid[p][o])) && grid[p][o].equals(grid[p][o])){                   /*diagonal win */ 
+    //               return true;
+     //          }
+      //      }
+       // }
 
         return false; /* remove this line! */
 
