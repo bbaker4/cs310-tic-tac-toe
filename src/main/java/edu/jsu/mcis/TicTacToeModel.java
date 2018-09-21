@@ -127,12 +127,14 @@ public class TicTacToeModel {
         
         /* Return true if square at specified location is marked */
         
-        /* INSERT YOUR CODE HERE */
-       if(row != Mark.EMPTY){
-           return true;
-       }
+        /* INSERT YOUR CODE HERE 
+    if(){
+        if(){
 
-        return false; /* remove this line! */
+        }
+    }
+    */
+        return false;  //remove this line! */
             
     }
 	
@@ -170,14 +172,15 @@ public class TicTacToeModel {
         /* Check the squares of the board to see if the specified mark is the
            winner */
         
-        /* INSERT YOUR CODE HERE */
+        /* INSERT YOUR CODE HERE 
         for(int l = 0; l < width; ++l){
             for(int k = 0; k < width; ++k){
-               if(width[j][l] != Mark.Empty){
+               if(grid[k][l] = Mark){
                    return true;
                }
             }
         }
+        */
 
         return false; /* remove this line! */
 
@@ -188,21 +191,16 @@ public class TicTacToeModel {
         /* Check the squares of the board to see if the game is a tie */
 
         /* INSERT YOUR CODE HERE */
-        boolean tie = false;
-        int turn = 0;
-        int turn2 = 0;
-        int counter = 9;
-        for (int k =0; k > counter; ++k){
-            ++turn;
-            ++turn2;
-            if(turn > counter || turn2 > counter){
-                tie = true;
-                break;
+        for(int a = 0; a < width; ++a){
+            for(int b = 0; b < width; ++b){
+               if(grid[a][b] != Mark.EMPTY){
+                   return true;
+               }
             }
-            System.out.println("The match is a tie!");
         }
+       
 
-        return tie; /* remove this line! */
+        return false; /* remove this line! */
         
     }
 
