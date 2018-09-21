@@ -170,25 +170,26 @@ public class TicTacToeModel {
     private boolean isMarkWin(Mark mark) {
         
         /* Check the squares of the board to see if the specified mark is the
-           winner */
+           winner 
         
-        /* INSERT YOUR CODE HERE 
+             INSERT YOUR CODE HERE 
         for(int o = 0; 0 < width; o++){
             for(int p = 0; p <width; p++){
-                if(!grid[o].equals(Mark.EMPTY) && grid[o].equals(o + 1) && grid[o].equals(o + 2)){                        /*Horizontal win 
+                if(!grid[o].equals(Mark.EMPTY) && grid[o].equals(o + 1) && grid[o].equals(o + 2)){                         
                     return true;
                }
-               else if(!grid[p].equals(Mark.EMPTY)){                   /*verical win 
+               else if(!grid[p].equals(Mark.EMPTY)){                   
                     return true;
                }            
                else if(!grid[0][0].equals(Mark.EMPTY) && grid[o][p].equals(grid[o][p] && grid[o][p].equals(grid[o][p]))
-               || !grid[p][o].equals(Mark.EMPTY && grid[p][o].equals(grid[p][o])) && grid[p][o].equals(grid[p][o])){                   /*diagonal win */ 
-    //               return true;
-     //          }
-      //      }
-       // }
+               || !grid[p][o].equals(Mark.EMPTY && grid[p][o].equals(grid[p][o])) && grid[p][o].equals(grid[p][o])){                    
+                   return true;
+               }
+            }
+        }
 
-        return false; /* remove this line! */
+         remove this line! */
+         return false;
 
     }
 	
