@@ -161,7 +161,15 @@ public class TicTacToeModel {
            value */
         
         /* INSERT YOUR CODE HERE */
-        
+        if(isMarkWin(Mark.X)){
+            return Result.X;
+        }
+        else if(isMarkWin(Mark.O)){
+            return Result.O;
+        }
+        else if(isTie()){
+            return Result.TIE;
+        }
         
         
         return null; /* remove this line! */
