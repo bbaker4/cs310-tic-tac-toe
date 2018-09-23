@@ -163,35 +163,37 @@ public class TicTacToeModel {
         /* INSERT YOUR CODE HERE */
         
         
+        
         return null; /* remove this line! */
 
     }
 	
     private boolean isMarkWin(Mark mark) {
         
-        /* Check the squares of the board to see if the specified mark is the
-           winner 
+         //Check the squares of the board to see if the specified mark is the
+         //  winner 
         
-             INSERT YOUR CODE HERE 
+           //  INSERT YOUR CODE HERE 
         for(int o = 0; 0 < width; o++){
             for(int p = 0; p <width; p++){
-                if(!grid[o].equals(Mark.EMPTY) && grid[o].equals(o + 1) && grid[o].equals(o + 2)){                         
-                    return true;
-               }
-               else if(!grid[p].equals(Mark.EMPTY)){                   
-                    return true;
+                if(grid[o][p] != mark){
+                    if(p == width - 1){
+                        return true;
+                    }
+                }                         
+               else if(grid[o][p] != mark){                   
+                    if(o == width - 1){
+                        return true;
+                    } 
                }            
-               else if(!grid[0][0].equals(Mark.EMPTY) && grid[o][p].equals(grid[o][p] && grid[o][p].equals(grid[o][p]))
-               || !grid[p][o].equals(Mark.EMPTY && grid[p][o].equals(grid[p][o])) && grid[p][o].equals(grid[p][o])){                    
+               else if(grid[width-1-o][o] != mark || grid[o][o] != mark){                    
                    return true;
                }
             }
         }
-
-         remove this line! */
-         return false;
-
+        return false;
     }
+
 	
     private boolean isTie() {
         

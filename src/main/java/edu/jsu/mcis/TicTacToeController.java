@@ -29,14 +29,23 @@ public class TicTacToeController {
         
         view.showNextMovePrompt();
         
+        
         /* Receive and validate input, which should be read at the keyboard as
            two integers, the row and the column (for example, "1 1" for the
            center square of a 3 x 3 grid).  Make mark if input is valid, or show
            error message using view's showInputError() if input is invalid. */
         
         /* INSERT YOUR CODE HERE */
-        System.out.print("please input 2 numbers with a space inbetween them to place a mark");
-        
+        int inputa = keyboard.nextInt();
+        int inputb = keyboard.nextInt();
+
+         if(inputa > model.getWidth() || inputb > model.getWidth()){
+            view.showInputError();
+        }
+        else if(!model.makeMark(inputa, inputb)){
+            view.showInputError();
+        }
+
         
     }
 
