@@ -81,10 +81,10 @@ public class TicTacToeModel {
         /* INSERT YOUR CODE HERE */
         for(int i = 0; i < width; ++i){
             for(int j = 0; j < width; ++j){
-             grid[i][j] = Mark.EMPTY;   
+             grid[i][j] = Mark.EMPTY;
+             System.out.println(grid[i][j]);   
             }
         }
-        System.out.println(grid);
     }
 	
     public boolean makeMark(int row, int col) {
@@ -120,7 +120,6 @@ public class TicTacToeModel {
         if(row < width && row >= 0){
             if(col < width && col >= 0){
                 return true;
-               
            }
         }
         return false;
