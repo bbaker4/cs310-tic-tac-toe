@@ -18,7 +18,7 @@ public class TicTacToeView {
         
         /* INSERT YOUR CODE HERE */
         System.out.print("\n\n");
-        System.out.print(" ");
+        System.out.print("  ");
         for(int e = 0; e < model.getWidth(); e++){
             System.out.print(e);
         }
@@ -31,7 +31,7 @@ public class TicTacToeView {
                 }
                 System.out.print("\n");
             }
-            System.out.print("\n");
+            System.out.print("\n\n");
         }
     
 
