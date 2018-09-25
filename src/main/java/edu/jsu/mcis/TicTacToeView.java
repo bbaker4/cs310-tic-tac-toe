@@ -46,7 +46,7 @@ public class TicTacToeView {
         else{
             System.out.print("Player two (O), make your move");
         }
-        System.out.println("Enter the row and column numbers, separated by a space");
+        System.out.print("Enter the row and column numbers, separated by a space");
 
     }
 
