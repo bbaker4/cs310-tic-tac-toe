@@ -241,25 +241,18 @@ public class TicTacToeModel {
         /* Check the squares of the board to see if the game is a tie */
 
         /* INSERT YOUR CODE HERE */
-        boolean empt = false;
-       for(int row = 0; row < width; row++){
-           for(int col = 0; col < width; col++){
-                if(grid[row][col] != Mark.EMPTY){
-                    empt = true;
+        if (isMarkWin(Mark.X) || isMarkWin(Mark.O)) {
+            return false;
+        } 
+        for (int i = 0; i < width; i++) {
+            for(int j = 0;j < width; j++) {
+                if (getMark(i,j) == Mark.EMPTY) {
+                    return false;
                 }
-           }
-       }
-       if(empt){
-           return false;
-       }
-       else{
-           return true;
-       }
+            }
+        }
         
-       
-
-        
-        
+        return true;
     }
 
     public boolean isGameover() {
