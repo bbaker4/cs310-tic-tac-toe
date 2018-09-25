@@ -185,24 +185,53 @@ public class TicTacToeModel {
          //Check the squares of the board to see if the specified mark is the
          //  winner 
         
-           //  INSERT YOUR CODE HERE 
-        for(int o = 0; 0 < width; o++){
-            for(int p = 0; p <width; p++){
-                if(grid[o][p] != mark){
-                    if(p == width - 1){
-                        return true;
-                    }
-                }                         
-               else if(grid[o][p] != mark){                   
-                    if(o == width - 1){
-                        return true;
-                    } 
-               }            
-               else if(grid[width-1-o][o] != mark || grid[o][o] != mark){                    
-                   return true;
-               }
+           //  INSERT YOUR CODE HERE
+           //Vertical
+           int counter = 0; 
+           for(int a = 0; a < width; a++){
+            counter = 0;
+            for(int b = 0; b < width; b++){
+                if(getMark(a,b) == mark){
+                    counter++;
+                }
+            }
+            if(counter == width){
+                return true;
             }
         }
+            //Horizontal
+            for(int c = 0; c < width; c++){
+                counter = 0;
+                for(int d = 0; d < width; d++){
+                    if(getMark(d,c) == mark){
+                        counter++;
+                    }
+                    if(counter == width){
+                        return true;
+                    }
+                }
+            }
+
+            //Diagonal 1
+            counter = 0;
+            for(int e = 0; e < width; e++){
+                if(getMark(e,e) == mark){
+                    counter++;
+                }
+            }
+            if(counter == width){
+                return true;
+            }
+            //Diagonal 2
+            counter = 0;
+            for(int f = 0; f < width; f++){
+                if(getMark(f,width-f-1) == mark){
+                    counter++;
+                }
+            }
+            if(counter == width){
+                return true;
+            }
         return false;
     }
 
