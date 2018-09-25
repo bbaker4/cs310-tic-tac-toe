@@ -82,7 +82,7 @@ public class TicTacToeModel {
         for(int i = 0; i < width; ++i){
             for(int j = 0; j < width; ++j){
              grid[i][j] = Mark.EMPTY;
-             System.out.println(grid[i][j]);   
+            // System.out.println(grid[i][j]);   
             }
         }
     }
@@ -131,13 +131,16 @@ public class TicTacToeModel {
         /* Return true if square at specified location is marked */
         
         /* INSERT YOUR CODE HERE */
-    if(isValidSquare(row, col)){
         if(grid[row][col] == Mark.EMPTY ){
+            return false;
+        }
+        else{
             return true;
         }
-    }
+        
     
-        return false;  //remove this line! */
+    
+       
             
     }
 	
@@ -147,7 +150,8 @@ public class TicTacToeModel {
         
         
         /* INSERT YOUR CODE HERE */
-        return grid[row][col];
+        Mark zone = grid[row][col];
+        return zone;
 
          
             
@@ -169,9 +173,10 @@ public class TicTacToeModel {
         else if(isTie()){
             return Result.TIE;
         }
+        else{
+            return Result.NONE;
+        }
         
-        
-        return null; /* remove this line! */
 
     }
 	
