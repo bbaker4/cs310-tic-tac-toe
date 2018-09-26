@@ -66,8 +66,13 @@ public class TicTacToeView extends JPanel implements ActionListener {
         updateSquares();
        
 
-        if(model.getResult() != TicTacToeModel.Result.NONE) {            
+        if(model.isGameover()) {
             showResult((model.getResult().toString()));
+            for(int i = 0; i < model.getWidth(); i++){
+                for(int j = 0; j < model.getWidth(); j++){
+                    squares[i][j].setEnabled(false);
+                }
+            }
         }
     }
         
