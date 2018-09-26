@@ -7,6 +7,8 @@ import javax.swing.*;
 
 public class TicTacToeView extends JPanel implements ActionListener {
     
+    private static final long serialVersionUID = 1L;
+
     private TicTacToeModel model;
 
     private JButton[][] squares;
