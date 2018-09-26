@@ -76,9 +76,9 @@ public class TicTacToeView extends JPanel implements ActionListener {
 
         int width = model.getWidth();
         
-        for(int i = 0; i < width; i++) {
-            for(int j = 0; j < width; j++) {
-                squares[i][j].setText(model.getMark(i,j).toString());
+        for(int a = 0; a < width; a++) {
+            for(int v = 0; v < width; v++) {
+                squares[a][v].setText(model.getMark(a,v).toString());
             }
         }
     }
